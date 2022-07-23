@@ -13,15 +13,15 @@
 
 <body>
     <script>
-        alert("Instruction : \n\n\t1. Click 'Change text' to change the display text\n\t2. After changing double tap/click the screen to use fullscreen")
+        alert("Instruction : \n\n\t1. Click 'Change text' to change the display text\n\t2. After changing double tap/click the screen to use fullscreen\n\t3.Please landscape your phone orientation")
         function _displayText() {
             var data = document.getElementById("input-text")
             if (!!data && data.value.length < 9) {
                 let value = document.getElementById('display-text').className = 'is-not-animatede-text'
-                document.getElementById("display-text").innerHTML =`<nobr>&nbsp;${data.value}&nbsp;</nobr>`
-            } else if(!!data) {
+                document.getElementById("display-text").innerHTML = `<nobr>&nbsp;${data.value}&nbsp;</nobr>`
+            } else if (!!data) {
                 let value = document.getElementById('display-text').className = 'animated-text'
-                document.getElementById("display-text").innerHTML =`<nobr>&nbsp;${data.value}&nbsp;</nobr>`
+                document.getElementById("display-text").innerHTML = `<nobr>&nbsp;${data.value}&nbsp;</nobr>`
             }
         }
         function getFullscreenElement() {
@@ -71,11 +71,13 @@
     </div>
     <div class="container">
         <p>
-            <span class="is-not-animated-text" id="display-text"><nobr>&nbsp;HELLO&nbsp;</nobr></span>
+            <span class="is-not-animated-text" id="display-text">
+                <nobr>&nbsp;HELLO&nbsp;</nobr>
+            </span>
         </p>
     </div>
     <div class="footer">
-        <h6 class="text-size">amilasaad.github.io/pa-fyne-pokuya/</h6>
+        <h6 class="text-size">amilasaad.github.io/pa-fyne-pokuya</h6>
     </div>
 </body>
 
