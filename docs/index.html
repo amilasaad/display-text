@@ -16,7 +16,7 @@
         alert("Instruction : \n\n\t1. Click 'Change text' to change the display text\n\t2. After changing double tap/click the screen to use fullscreen\n\t3. Please landscape your phone orientation")
         function _displayText() {
             var data = document.getElementById("input-text")
-            if (!!data && data.value.length < 9) {
+            if (!!data && data.value.length < 8) {
                 let value = document.getElementById('display-text').className = 'is-not-animatede-text'
                 document.getElementById("display-text").innerHTML = `<nobr>&nbsp;${data.value}&nbsp;</nobr>`
             } else if (!!data) {
