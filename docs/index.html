@@ -16,12 +16,20 @@
         alert("Instruction : \n\n\t1. Click 'Change text' to change the display text\n\t2. After changing double tap/click the screen to use fullscreen\n\t3. Please landscape your phone orientation")
         function _displayText() {
             var data = document.getElementById("input-text")
-            if (!!data && data.value.length < 7) {
-                let value = document.getElementById('display-text').className = 'is-not-animatede-text'
-                document.getElementById("display-text").innerHTML = `<nobr>&nbsp;${data.value}&nbsp;</nobr>`
+            // document.getElementById('display-text1').className = 'is-not-animatede-text'
+            // document.getElementById('display-text2').className = 'is-not-animatede-text'
+            // document.getElementById('display-text1').innerHTML = '<nobr>HELLLO</nobr>'
+            // document.getElementById('display-text2').innerText = ''
+            if (!!data && data.value.length < 6) {
+                document.getElementById('display-text1').className = 'is-not-animated-text'
+                document.getElementById('display-text2').className = 'is-not-animated-text'
+                document.getElementById('display-text1').innerHTML = `<nobr>${data.value}</nobr>`
+                document.getElementById('display-text2').innerText = ''
             } else if (!!data) {
-                let value = document.getElementById('display-text').className = 'animated-text'
-                document.getElementById("display-text").innerHTML = `<nobr>&nbsp;${data.value}&nbsp;</nobr>`
+                document.getElementById('display-text1').className = 'animated-text1'
+                document.getElementById('display-text2').className = 'animated-text2'
+                document.getElementById('display-text1').innerHTML = `<nobr>&nbsp;${data.value}</nobr>`
+                document.getElementById('display-text2').innerHTML = `<nobr>&nbsp;${data.value}&nbsp;</nobr>`
             }
         }
         function getFullscreenElement() {
@@ -44,7 +52,7 @@
     </script>
     <div class="modal-center">
         <!-- modal button -->
-        <button type="button" class="btn btn-success btn-local-style" data-toggle="modal" data-target="#myModal">
+        <button type="button" class="btn btn-info btn-local-style" data-toggle="modal" data-target="#myModal">
             Change Text
         </button>
     </div>
@@ -70,9 +78,12 @@
         </div>
     </div>
     <div class="container">
-        <p>
-            <span class="is-not-animated-text" id="display-text">
-                <nobr>&nbsp;HELLO&nbsp;</nobr>
+        <p class="paragraph">
+            <span class="is-not-animated-text" id="display-text1">
+                <nobr>HELLO</nobr>
+            </span>
+            <span class="is-not-animated-text" id="display-text2">
+                <nobr></nobr>
             </span>
         </p>
     </div>
